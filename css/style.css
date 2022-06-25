@@ -1,0 +1,481 @@
+/* Font Directory */
+@font-face {
+    font-family: sf-semibold;
+    src: url('../assets/fonts/SF-UI-Display-Semibold.otf');
+}
+
+@font-face {
+    font-family: sf-medium;
+    src: url('../assets/fonts/SF-UI-Display-Medium.otf');
+}
+
+/* Color Directory*/
+:root{
+    --dark-navy:rgb(4, 2, 31);
+    --navy:rgb(7, 0, 70);
+    --lemon:rgb(165, 197, 21);
+    --dark-grey:rgb(109, 109, 109);
+    --grey:rgb(214, 214, 214);
+    --white:rgb(255, 255, 255);
+}
+
+/* Typography Directory*/
+h1{
+    font-family: sf-semibold;
+    font-size: 3.5rem;
+    line-height: 100%;
+}
+h2{
+    font-family: sf-semibold;
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+h3{
+    font-family: sf-semibold;
+    font-size: 1.5rem;
+    line-height: 100%;
+}
+h4{
+    font-family: sf-semibold;
+    font-size: 1.2rem ;
+    line-height: 100%;
+}
+p{
+    font-family: sf-medium;
+    font-size: 1rem ;
+    line-height: 150%;
+    text-align: justify;
+}
+a{
+    font-family: sf-medium;
+    font-size: 1rem;
+    line-height: 100%;
+}
+i{
+    font-family: sf-medium;
+    font-size: 1.2rem;
+    line-height: 100%;
+}
+.circle{
+    border-radius:50%;
+}
+
+.padding{
+    padding: 5rem;
+}
+
+.btn{
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.2rem;
+}
+
+.outline-btn{
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.2rem;
+}
+
+html,body{
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* Navbar Section Here */
+
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: var(--grey);
+    z-index: 1000;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+    transition: .5s ease-in;
+    z-index: 100;
+}
+
+.brand{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 6rem;
+    z-index: 997;
+}
+.brand h3{
+    position: absolute;
+    color: var(--dark-navy);
+    transition: .5s ease-in;
+    z-index: 100;
+}
+
+.brand .circle{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--lemon);
+    left: 0;
+    transition: .5s ease-in;
+    z-index: 99;
+}
+
+.brand:hover .circle{
+    left: 4rem;
+}
+
+.hamburger-menu, .hamburger-menu span{
+    transition: .4s ease-in-out all;
+    z-index: 999;
+}
+
+.hamburger-menu span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--navy);
+}
+
+.hamburger-menu span:not(:last-child){
+    margin-bottom: 7px;
+}
+
+.hm-active{
+    transition-delay: .8s;
+    transform: rotate(45deg);
+}
+
+.hm-active span{
+    background-color: var(--lemon);
+}
+
+.hm-active span:nth-child(2){
+    width: 0px;
+}
+
+.hm-active span:not(:nth-child(2)){
+    transition-delay: .4s;
+}
+
+.hm-active span:nth-child(1){
+    transform: translate(0, 9px);
+}
+
+.hm-active span:nth-child(3){
+    transform: translate(0, -9px) rotate(90deg);
+}
+
+
+.nav-item{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-navy);
+    right: 0;
+    top: 0;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: 1s ease-in-out all;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.nav-item .item{
+    color: var(--dark-grey);
+    transition: .5s ease-in;
+}
+
+.nav-item .item:hover{
+    color: var(--lemon);
+}
+
+.nav-item .btn{
+    background-color: var(--navy);
+    color: var(--lemon);
+}
+
+
+.nav-slide{
+    transform: translateX(0);
+}
+
+
+.nav-sticky .container{
+    background-color: var(--dark-navy);
+}
+
+.nav-sticky .brand h3{
+    color: var(--lemon);
+}
+
+.nav-sticky .brand .circle{
+    background-color: var(--navy);
+}
+
+.nav-sticky .hamburger-menu span{
+    background-color: var(--white);
+}
+
+.nav-sticky .hm-active span{
+    background-color: var(--lemon);
+}
+
+
+/* Hero Section Here */
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgb(187, 187, 187), #fff, #fff );
+    overflow: hidden;
+}
+
+
+#hero .container{
+    display: grid;
+    grid-template-areas: 'content content' 'images images';
+    grid-template-rows: 1fr 1fr;   
+    padding: 5rem 1.5rem 0 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content{
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: content;
+    gap: 1rem;
+}
+
+.hero-content h3, .hero-content h1{
+    color: var(--dark-navy);
+}
+
+.hero-content .regular-font{
+    font-family: sf-medium;
+    font-weight: normal;
+}
+
+.hero-content p{
+    color: var(--dark-grey);
+}
+
+.hero-content p span{
+    color: var(--dark-navy);
+}
+
+
+.hero-contact{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-contact .btn{
+    background-color: var(--dark-navy);
+    color: var(--lemon);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.hero-contact .btn:hover{
+    color: var(--white);
+}
+
+.hero-contact .circle{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-contact .circle i{
+    color: var(--dark-navy);
+}
+
+.hero-contact .circle:hover{
+    background-color: var(--lemon);
+}
+
+.hero-cv{
+    color: var(--dark-grey);
+    transition: .5s ease-in;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.hero-cv:hover{
+    color: var(--dark-navy);
+}
+
+.hero-images{
+    height: 54vh;
+    position: relative;
+    grid-area: images;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-images img{
+    position: absolute;
+    width: 50vh;
+    z-index: 10;
+    bottom: 0;
+
+}
+
+
+.hero-images .circle{
+    position: absolute;
+    bottom: 0;
+    width: 40vh;
+    height: 40vh;
+    background-color: var(--lemon);
+    z-index: 9;
+}
+
+/* About Section Here */
+#about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/images/topographic-01.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: var(--navy);
+}
+
+#about .container{
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'content content''images images';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.about-content{
+    padding: 2rem 2rem 0px 2rem;
+
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;    
+}
+
+.about-content h4{
+    color: var(--lemon);
+}
+
+.about-content h2,.about-content p{
+    color: var(--white);
+}
+
+.about-content p{
+    text-indent: 3rem;
+}
+
+.about-contact{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-contact .btn{
+    color: var(--dark-navy);
+    background-color: var(--lemon);
+}
+
+.about-contact .outline-btn{
+    outline: solid 2px var(--lemon);
+    outline-offset: -2px;
+    color: var(--lemon);
+}
+
+.about-images{
+    grid-area: images;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about-images img{
+    width: 100vw;
+    position: absolute;
+    z-index: 40;
+    filter: saturate(0);
+}
+
+.about-images .circle{
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    background-color: var(--lemon);
+    left: -50%;
+    top: 0;
+    z-index: 39;
+}
+
+.about-images .circle2{
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius:50%;
+    background-color: var(--dark-navy);
+    right: -25vw;
+    bottom: -25vw;
+}
+/* Responsive Breakpoints */
+
+@media screen and (max-width:320px) {
+    html{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width:400px) {
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:560px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html{
+        font-size: 18px;
+    }
+}
