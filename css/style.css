@@ -439,23 +439,14 @@ nav .container{
 
 .about-images .circle{
     position: absolute;
-    width: 100vw;
-    height: 100vw;
+    width: 125vw;
+    height: 125vw;
     background-color: var(--lemon);
-    left: -50%;
-    top: 0;
+    bottom: -25%;
     z-index: 39;
 }
 
-.about-images .circle2{
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    border-radius:50%;
-    background-color: var(--dark-navy);
-    right: -25vw;
-    bottom: -25vw;
-}
+
 /* Responsive Breakpoints */
 
 @media screen and (max-width:320px) {
