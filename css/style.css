@@ -76,7 +76,7 @@ i{
 
 html,body{
     scroll-behavior: smooth;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 *{
@@ -194,6 +194,11 @@ nav .container{
     transition: 1s ease-in-out all;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+}
+
+.nav-item img{
+    width: 8rem;
+    height: 8rem;
 }
 
 .nav-item .item{
@@ -431,10 +436,11 @@ nav .container{
 
 
 .about-images img{
-    width: 50vh;
+    height: 100%;
     position: absolute;
     z-index: 40;
     filter: saturate(0);
+    bottom: 0;
 }
 
 .about-images .circle{
@@ -442,7 +448,7 @@ nav .container{
     width: 150vw;
     height: 150vw;
     background-color: var(--lemon);
-    bottom: -50%;
+    top: 0;
     z-index: 39;
 }
 
