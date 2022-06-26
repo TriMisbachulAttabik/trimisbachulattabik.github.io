@@ -61,7 +61,7 @@ i{
 }
 
 .padding{
-    padding: 5rem;
+    padding: 2rem;
 }
 
 .btn{
@@ -80,7 +80,7 @@ i{
 }
 html,body{
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 *{
@@ -469,12 +469,17 @@ nav .container{
     overflow: hidden;
 }
 
+.grey{
+    background-color: var(--grey);
+}
+
+
 #skill .container{
     display: grid;
     width: 100%;
     height: 100vh;
     grid-template-areas: 'heading heading' 'content content' ;
-    grid-template-rows: max-content minmax(40vh, auto);
+    grid-template-rows: auto minmax(40vh, auto);
     align-content: space-between;
     row-gap: 2rem;
     padding: 2rem;
@@ -482,6 +487,8 @@ nav .container{
 
 
 .skill-heading{
+    position: relative;
+    overflow: hidden;
     grid-area: heading;
     display: flex;
     flex-direction: column;
@@ -506,6 +513,7 @@ nav .container{
 
 
 .skill-content{
+    position: relative;
     display: flex;
     flex-direction: column;
     grid-area: content;
@@ -522,6 +530,10 @@ nav .container{
     gap: 1rem;
 }
 
+.grey .skill-item{
+    background-color: var(--white);
+}
+
 .skill-content img{
     max-width: 3rem;
 }
@@ -532,25 +544,74 @@ nav .container{
     gap: 1rem;
 }
 
-
-
-/* Responsive Breakpoints */
-
-@media screen and (max-width:320px) {
-    html{
-        font-size: 10px;
-    }
+/* Footer Section Here */
+#footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    background-color: var(--navy);
 }
 
+#footer .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+#footer .brand h3{
+    color: var(--lemon);
+}
+
+#footer .brand .circle{
+    background-color: var(--dark-navy);
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.footer-item h4{
+    color: var(--lemon);
+}
+
+.footer-item .item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-item .item a{
+    color: var(--dark-grey);
+    transition: 0.5s ease-in; 
+}
+
+.footer-item .item a:hover{
+    color: var(--white);
+    padding-left: 0.5rem;
+}
+
+#footer .copyright{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark-navy);
+    color: var(--dark-grey);
+}
+/* Responsive Breakpoints */
 
 @media screen and (min-width:360px) {
     html{
         font-size: 14px;
-    }
-}
-
-@media screen and (min-width:560px) {
-    html{
-        font-size: 16px;
     }
 }
