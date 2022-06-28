@@ -89,7 +89,7 @@ i{
 }
 html,body{
     scroll-behavior: smooth;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 *{
@@ -366,14 +366,6 @@ nav.nav_sticky .hamburger_menu_action span{
     
 }
 
-@media screen and (min-width:420px) {
-    html{
-        font-size: 16px;
-    }
-    
-}
-
-
 @media screen and (min-width:576px) {
     
 
@@ -397,9 +389,7 @@ nav.nav_sticky .hamburger_menu_action span{
  }
  
  @media screen and (min-width:860px) {
-    html{
-        font-size: 14px;
-    }
+
     /* Navbar Section Here  */
    
     #hero .container{
