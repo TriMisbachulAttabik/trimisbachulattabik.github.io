@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: sf-regular;
+    src: url('../assets/fonts/SF-UI-Display-Regular.ttf');
+}
+
+@font-face {
     font-family: cotton-butter;
     src: url('../assets/fonts/Cotton\ Butter.ttf');
 }
@@ -27,22 +32,21 @@
 /* Typography Directory*/
 h1{
     font-family: sf-semibold;
-    font-size: 3.2rem;
+    font-size: 4rem;
     line-height: 100%;
 }
 h2{
     font-family: sf-semibold;
-    font-size: 2.3rem;
+    font-size: 3rem;
     line-height: 100%;
 }
 h3{
     font-family: sf-semibold;
-    font-size: 1.5rem;
-    line-height: 100%;
+    font-size: 2rem;
 }
 h4{
     font-family: sf-semibold;
-    font-size: 1.2rem ;
+    font-size: 1.5rem ;
     line-height: 100%;
 }
 p{
@@ -100,6 +104,10 @@ html,body{
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.regular{
+    font-family: sf-regular;
 }
 /* Navbar Section Here */
 nav{
@@ -271,24 +279,31 @@ nav.nav_sticky .hamburger_menu_action span{
 }
 
 #hero .container{
-    position: relative;
+    overflow: hidden;
     display: grid;
-    grid-template-areas: 'content content' 'images images';
+    grid-template-areas: 'content content' 'images images' ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content auto;
-    row-gap: .5rem;
-    padding: 6rem 2rem 0 2rem;
+    grid-template-rows: max-content 60vh;
+    align-content: space-between;
+    gap: 1rem;
+    padding: 5rem 2rem 0 2rem;
 }
 
 .hero-content{
-    grid-area: content;
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
+    grid-area: content;
 }
 
-.hero-content h3,.hero-content h1{
+.hero-content h3, .hero-content h1{
     color: var(--dark-navy);
+}
+
+.hero-content h3 span{
+    font-weight: normal;
 }
 
 .hero-content p{
@@ -297,60 +312,51 @@ nav.nav_sticky .hamburger_menu_action span{
 
 .hero-contact{
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items:center;
+    gap:5%;
 }
 
 .hero-contact .button{
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     background-color: var(--dark-navy);
     color: var(--lemon);
 }
 
-.hero-contact .button p{
-    color: var(--white);
-}
-
 .hero-contact .circle{
-    padding: 0.8rem;
-    color: var(--dark-navy);
+    padding: 0.7rem;
     background-color: var(--grey);
+    color: var(--dark-navy);
 }
 
 .hero-cv{
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     color: var(--dark-grey);
 }
 
 .hero-images{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
     grid-area: images;
-    width: 100%;
 }
 
 .hero-images .img1{
-    position: absolute;
-    max-height: 50vh;
+    position: relative;
+    height: 90%;
     bottom: 0;
-    filter: drop-shadow(1rem 0rem .5rem rgba(0,0,0,50%) );
     z-index: 100;
 }
-
 .hero-images .img2{
     position: absolute;
-    max-height: 40vh;
-    bottom: 10%;
+    height: 70%;
     z-index: 99;
 }
-
-
-
 
 /* Responsive Breakpoints */
 @media screen and (max-width:360px) {
@@ -368,32 +374,8 @@ nav.nav_sticky .hamburger_menu_action span{
 }
 
 
-@media screen and (min-width:600px) {
-    h1{
-        font-size: 4rem;
-    }
-    h2{
-        font-size: 3rem;
-    }
-    h3{
-        font-size: 2.5rem;
-    }
-    h4{
-        font-size: 2rem ;
-    }
-    p{
-        font-size: 1rem ;
-    }
-    a{
-        font-size: 1rem;
-    }
-    i{
-        font-size:1.5rem;
-    }
-
-    html{
-        font-size: 16px;
-    }
+@media screen and (min-width:576px) {
+    
 
     .nav_items{
         position: relative;
@@ -414,14 +396,35 @@ nav.nav_sticky .hamburger_menu_action span{
     }
  }
  
- @media screen and (min-width:900px) {
+ @media screen and (min-width:860px) {
     html{
-        font-size: 15px;
+        font-size: 14px;
     }
     /* Navbar Section Here  */
-    nav.nav_sticky .container{
-        height: 4.5rem;
+   
+    #hero .container{
+        grid-template-areas: 'content images' 'content images' ;
+    grid-template-columns:auto max-content;
+    grid-template-rows: 1fr 1fr;
+        
     }
+    .hero-images .img1{
+        position: relative;
+        bottom: 0;
+        z-index: 100;
+    }
+    .hero-images .img2{
+        position: absolute;
+        z-index: 99;
+    }
+    
+ }
+
+ @media screen and (min-width:992px) {
+    html{
+        font-size: 16px;
+    }
+    
  }
 
 @media screen and (min-width:1366px) {
