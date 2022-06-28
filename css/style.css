@@ -112,7 +112,7 @@ nav{
 
 nav .container{
     position: relative;
-    height: 5rem;
+    height: 4rem;
     width: 100%;
     padding: 0 2rem;
     display: flex;
@@ -123,7 +123,7 @@ nav .container{
 
 .brand img{
     position: relative;
-    height: 4rem;
+    height: 3.5rem;
 }
 
 .brand img:hover{
@@ -218,8 +218,8 @@ nav.nav_sticky .hamburger_menu_action span{
 .hamburger_menu span{
     position: relative;
     display: block;
-    width: 2.5rem;
-    height: .2rem;
+    width: 24px;
+    height: 2px;
     border-radius: 1px;
     background-color: var(--dark-navy);
     transition: .5s ease-in all;
