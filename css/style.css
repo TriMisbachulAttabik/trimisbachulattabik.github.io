@@ -27,7 +27,7 @@
 /* Typography Directory*/
 h1{
     font-family: sf-semibold;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     line-height: 100%;
 }
 h2{
@@ -85,7 +85,7 @@ i{
 }
 html,body{
     scroll-behavior: smooth;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 *{
@@ -336,7 +336,7 @@ nav.nav_sticky .hamburger_menu_action span{
 
 .hero-images .img1{
     position: absolute;
-    height: 100%;
+    max-height: 50vh;
     bottom: 0;
     filter: drop-shadow(1rem 0rem .5rem rgba(0,0,0,50%) );
     z-index: 100;
@@ -344,7 +344,7 @@ nav.nav_sticky .hamburger_menu_action span{
 
 .hero-images .img2{
     position: absolute;
-    height: 90%;
+    max-height: 40vh;
     bottom: 10%;
     z-index: 99;
 }
@@ -353,9 +353,16 @@ nav.nav_sticky .hamburger_menu_action span{
 
 
 /* Responsive Breakpoints */
-@media screen and (max-width:300px) {
+@media screen and (max-width:360px) {
     html{
-        font-size: 10px;
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (min-width:420px) {
+    html{
+        font-size: 16px;
     }
     
 }
