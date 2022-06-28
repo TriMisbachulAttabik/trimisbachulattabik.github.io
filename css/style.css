@@ -212,6 +212,7 @@ nav.nav_sticky .hamburger_menu_action span{
 /* Hamburger Menu */
 
 .hamburger_menu{
+    height: max-content;
     z-index: 1002;
 }
 
