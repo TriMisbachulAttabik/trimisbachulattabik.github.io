@@ -46,18 +46,18 @@ h4{
     line-height: 100%;
 }
 p{
-    font-family: sf-medium;
+    font-family: sf-semibold;
     font-size: 1rem ;
     line-height: 150%;
     text-align: justify;
 }
 a{
-    font-family: sf-medium;
+    font-family: sf-semibold;
     font-size: 1rem;
     line-height: 100%;
 }
 i{
-    font-family: sf-medium;
+    font-family: sf-semibold;
     font-size:1.5rem;
     line-height: 100%;
 }
@@ -212,7 +212,10 @@ nav.nav_sticky .hamburger_menu_action span{
 /* Hamburger Menu */
 
 .hamburger_menu{
-    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     z-index: 1002;
 }
 
@@ -227,7 +230,7 @@ nav.nav_sticky .hamburger_menu_action span{
 }
 
 .hamburger_menu span:not(:last-child){
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 .hamburger_menu_action span:nth-child(2){
@@ -240,11 +243,11 @@ nav.nav_sticky .hamburger_menu_action span{
 }
 
 .hamburger_menu_action span:nth-child(1){
-    transform: translateY(9px);
+    transform: translateY(8px);
 }
 
 .hamburger_menu_action span:last-child{
-    transform: translateY(-9px) rotate(90deg);
+    transform: translateY(-8px) rotate(90deg);
 }
 
 .hamburger_menu_action{
@@ -281,7 +284,7 @@ nav.nav_sticky .hamburger_menu_action span{
     grid-area: content;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .hero-content h3,.hero-content h1{
@@ -357,12 +360,6 @@ nav.nav_sticky .hamburger_menu_action span{
     
 }
 
-@media screen and (min-width:390px) {
-    html{
-        font-size: 14px;
-    }
-    
-}
 
 @media screen and (min-width:600px) {
     h1{
